@@ -11,7 +11,7 @@ export function MobileMenuToggle() {
     <div className="md:hidden">
       <button
         type="button"
-        className="inline-flex items-center justify-center rounded p-2"
+        className="inline-flex items-center justify-center rounded p-2 cursor-pointer"
         aria-expanded={isMenuOpen}
         aria-controls="mobile-menu"
         aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
@@ -47,7 +47,7 @@ export function MobileMenuToggle() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded px-2 py-2 text-sm font-medium tracking-wide uppercase hover:bg-white/10"
+                className="rounded px-2 py-2 text-sm font-medium tracking-wide hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
