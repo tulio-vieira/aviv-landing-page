@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --maroon: #ba2c47;
+  --maroon-dark: #9c2339;
+  --graphite: #575756;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-maroon: var(--maroon);
+  --color-maroon-dark: var(--maroon-dark);
+  --color-graphite: var(--graphite);
+  --font-sans: var(--font-source-sans);
+  --font-heading: var(--font-oswald);
+  --font-serif: var(--font-eb-garamond);
+  --font-display: var(--font-bebas-neue);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--graphite);
+  font-family: var(--font-sans);
+}
+
+/*
+ * The three inline brand SVGs (hero stamp, topbar wordmark, footer badge) carry
+ * their own <style> blocks referencing the paid "Bebas Neue Pro" font, which we
+ * don't have a license for. We self-host the free "Bebas Neue" and force it in
+ * here rather than editing the source SVG markup, since every letter in the
+ * curved stamp text is individually positioned for that font's exact glyph
+ * widths. Class names are namespaced per SVG (hs- / tw- / fb-) to avoid
+ * collisions between the three files' originally-identical "cls-N" names.
+ */
+[data-brand-svg] [class*="-cls-"] {
+  font-family: var(--font-display), sans-serif !important;
+}
+
+[data-brand-svg] svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }

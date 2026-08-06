@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw, unoptimized design assets (see scripts/ for the processing pipeline)
+/assets-source/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
