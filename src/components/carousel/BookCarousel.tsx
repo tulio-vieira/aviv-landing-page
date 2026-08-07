@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Lightbox } from "./Lightbox";
@@ -29,20 +29,33 @@ export function BookCarousel() {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
+  // This useeffect is for resettin autoplay delay everytime the user moves a slide,
+  // either by pressing the button our by swipping.
+  useEffect(() => {
+    if (!emblaApi) return;
+    const resetAutoplay = () => emblaApi.plugins()?.autoplay?.reset();
+    emblaApi.on("select", resetAutoplay);
+    return () => {
+      emblaApi.off("select", resetAutoplay);
+    };
+  }, [emblaApi]);
+
   return (
     <section id="livros" className="bg-zinc-100 py-16 sm:py-24">
+      <h2 className="font-heading text-graphite text-center text-2xl tracking-wide sm:text-3xl mb-14">
+        Nosso trabalho
+      </h2>
       <div className="relative">
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex touch-pan-y">
+          <div className="flex touch-pan-y gap-4">
             {slides.map((slide, index) => (
-              <div className="min-w-0 flex-[0_0_100%]" key={slide.thumb}>
+              <div className="min-w-0 flex-[0_0_85%]" key={slide.thumb}>
                 <button
                   type="button"
-                  className="focus-visible:outline-maroon block w-full overflow-hidden transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2"
+                  className="focus-visible:outline-maroon block w-full overflow-hidden transition-transform hover:scale-[1.02] focus-visible:outline"
                   onClick={() => setLightboxIndex(index)}
                   aria-label={`Ampliar capa de livro ${index + 1} de ${SLIDE_COUNT}`}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={slide.thumb}
                     alt={slide.alt}

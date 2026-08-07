@@ -11,7 +11,7 @@ export const CONTACT = {
   instagramUrl: `https://wa.me/${WHATSAPP_NUMBER}`,
   email: "atendimento@avivsdg.com.br",
   hours: "De segunda a sexta-feira, das 9 às 18h",
-  hoursNote: "Atendimento EXCLUSIVAMENTE por WhatsApp",
+  hoursNote: "Atendimento EXCLUSIVAMENTE por WhatsApp e Email",
 } as const;
 
 export const NAV_LINKS = [
