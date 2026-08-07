@@ -31,7 +31,7 @@ export function Servicos() {
         Serviços editoriais para o universo cristão
       </p>
 
-      <div className="mt-10 grid gap-x-10 gap-y-8 text-left sm:grid-cols-2">
+      <div className="mt-10 grid gap-x-10 gap-y-8 text-center sm:grid-cols-2">
         {SERVICOS.map((servico) => (
           <ServiceItem key={servico.title} {...servico} />
         ))}

@@ -1,10 +1,10 @@
 export function Sobre() {
   return (
     <section id="sobre" className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-24">
-      <h2 className="font-serif text-2xl text-graphite sm:text-3xl">
+      <h2 className="font-oswald font-bold text-2xl text-graphite sm:text-3xl">
         Nascemos do desejo de{" "}
-        <span className="border-maroon text-maroon rounded-full border px-3 py-0.5">
-          servir
+        <span className="border-maroon border px-3 py-0.5 rounded-full">
+          Servir
         </span>
       </h2>
 
@@ -13,7 +13,7 @@ export function Sobre() {
           &ldquo;Tudo de bom que recebemos e tudo o que é perfeito vêm do céu,
           vêm de Deus, o Criador das luzes do céu.&rdquo;
         </p>
-        <cite className="mt-2 block text-sm not-italic text-graphite/70">
+        <cite className="mt-2 block text-sm font-serif not-italic text-graphite/70">
           Tg 1:17 (NTLH)
         </cite>
       </blockquote>

@@ -26,7 +26,7 @@ export function ComoAtuamos() {
     <section className="mx-auto max-w-4xl px-4 pb-16 text-center sm:px-6 sm:pb-24">
       <SectionPill>Como atuamos</SectionPill>
 
-      <div className="mt-10 grid gap-x-10 gap-y-8 text-left sm:grid-cols-2">
+      <div className="mt-10 grid gap-x-10 gap-y-8 text-center sm:grid-cols-2">
         {ATUACOES.map((atuacao) => (
           <ServiceItem key={atuacao.title} {...atuacao} />
         ))}

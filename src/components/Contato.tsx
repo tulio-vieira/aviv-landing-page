@@ -4,7 +4,7 @@ export function Contato() {
   return (
     <section id="contato" className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
       <div className="grid gap-10 sm:grid-cols-2 sm:items-center">
-        <div>
+        <div className="text-right">
           <p className="text-graphite text-lg sm:text-xl">
             Deseja saber mais sobre nosso trabalho?
             <br />
@@ -15,7 +15,7 @@ export function Contato() {
           </p>
         </div>
 
-        <div className="space-y-3 sm:text-right">
+        <div className="space-y-3 sm:text-left">
           <a
             href={CONTACT.whatsappUrl}
             target="_blank"
@@ -24,16 +24,16 @@ export function Contato() {
           >
             {CONTACT.whatsappDisplay}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/icons/whatsapp.svg" alt="" className="h-6 w-6" />
+            <img src="/icons/whatsapp-alt.svg" alt="" className="h-6 w-6" />
           </a>
-          <p className="text-graphite/80 text-sm">{CONTACT.hours}</p>
-          <p className="border-maroon text-maroon inline-block rounded-full border px-4 py-1 text-sm font-medium">
+          <p className="text-graphite/80">{CONTACT.hours}</p>
+          <p className="border-maroon inline-block rounded-full border px-4 py-1 font-medium">
             {CONTACT.hoursNote}
           </p>
           <p>
             <a
               href={`mailto:${CONTACT.email}`}
-              className="text-maroon text-sm hover:underline"
+              className="text-maroon hover:underline"
             >
               {CONTACT.email}
             </a>

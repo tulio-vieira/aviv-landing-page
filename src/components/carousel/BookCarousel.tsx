@@ -56,7 +56,7 @@ export function BookCarousel() {
   return (
     <section id="livros" className="bg-zinc-100 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="font-heading text-graphite text-center text-2xl tracking-wide uppercase sm:text-3xl">
+        <h2 className="font-heading text-graphite text-center text-2xl tracking-wide sm:text-3xl">
           Nosso catálogo
         </h2>
 
