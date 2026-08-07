@@ -39,7 +39,17 @@ function getServerSnapshot() {
   return false;
 }
 
-export function HeroBackground() {
+type HeroBackgroundProps = {
+  videoWebmSrc: string;
+  videoMp4Src: string;
+  posterSrc: string;
+};
+
+export function HeroBackground({
+  videoWebmSrc,
+  videoMp4Src,
+  posterSrc,
+}: HeroBackgroundProps) {
   const shouldPlayVideo = useSyncExternalStore(
     subscribe,
     computeShouldPlayVideo,
@@ -55,15 +65,15 @@ export function HeroBackground() {
           muted
           loop
           playsInline
-          poster="/images/hero-poster.webp"
+          poster={posterSrc}
         >
-          <source src="/videos/hero.webm" type="video/webm" />
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src={videoWebmSrc} type="video/webm" />
+          <source src={videoMp4Src} type="video/mp4" />
         </video>
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/images/hero-poster.webp"
+          src={posterSrc}
           alt="Pessoa lendo um livro em uma poltrona, cercada por estantes cheias de livros"
           className="h-full w-full object-cover"
           fetchPriority="high"

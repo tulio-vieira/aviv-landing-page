@@ -1,4 +1,5 @@
 import { CONTACT } from "@/config/site";
+import { withBasePath } from "@/config/environment";
 
 type SocialLinksProps = {
   className?: string;
@@ -18,7 +19,7 @@ export function SocialLinks({
         aria-label="Instagram da aviv SDG"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/icons/instagram.svg" alt="" className={iconClassName} />
+        <img src={withBasePath("/icons/instagram.svg")} alt="" className={iconClassName} />
       </a>
       <a
         href={CONTACT.whatsappUrl}
@@ -27,12 +28,12 @@ export function SocialLinks({
         aria-label="WhatsApp da aviv SDG"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/icons/whatsapp.svg" alt="" className={iconClassName} />
+        <img src={withBasePath("/icons/whatsapp.svg")} alt="" className={iconClassName} />
       </a>
       {/* No Amazon store yet, so this icon is shown but intentionally not a link. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/icons/amazon.svg"
+        src={withBasePath("/icons/amazon.svg")}
         alt="Loja na Amazon em breve"
         className={iconClassName}
       />

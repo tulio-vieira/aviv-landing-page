@@ -1,4 +1,6 @@
-export const SITE_URL = "https://www.avivsdg.com.br";
+import { environmentConfig } from "./environment";
+
+export const SITE_URL = environmentConfig.siteUrl;
 export const SITE_NAME = "aviv SDG Editorial";
 
 const WHATSAPP_NUMBER = "556130303030"; // +55 61 3030-3030, as provided

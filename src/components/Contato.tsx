@@ -1,4 +1,5 @@
 import { CONTACT } from "@/config/site";
+import { withBasePath } from "@/config/environment";
 
 export function Contato() {
   return (
@@ -24,7 +25,7 @@ export function Contato() {
           >
             {CONTACT.whatsappDisplay}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/icons/whatsapp-alt.svg" alt="" className="h-6 w-6" />
+            <img src={withBasePath("/icons/whatsapp-alt.svg")} alt="" className="h-6 w-6" />
           </a>
           <p className="text-graphite/80">{CONTACT.hours}</p>
           <p className="border-maroon inline-block rounded-full border px-4 py-1 font-medium">

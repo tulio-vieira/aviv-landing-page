@@ -3,6 +3,7 @@ import { Oswald, Source_Sans_3, EB_Garamond, Bebas_Neue } from "next/font/google
 import { Topbar } from "@/components/Topbar";
 import { Footer } from "@/components/Footer";
 import { SITE_NAME, SITE_URL } from "@/config/site";
+import { environmentConfig } from "@/config/environment";
 import "./globals.css";
 
 const sourceSans = Source_Sans_3({
@@ -64,6 +65,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+  },
+  robots: {
+    index: environmentConfig.allowIndexing,
+    follow: environmentConfig.allowIndexing,
   },
 };
 
