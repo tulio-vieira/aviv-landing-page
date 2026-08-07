@@ -1,1 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Camada_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.73 46.28"><defs><style>.tw-cls-1{letter-spacing:0em;}.tw-cls-2{letter-spacing:0em;}.tw-cls-3{font-family:BebasNeuePro-Bold, 'Bebas Neue Pro';font-weight:700;}.tw-cls-3,.tw-cls-4{fill:#fff;}.tw-cls-4{font-family:BebasNeuePro-Middle, 'Bebas Neue Pro';font-size:17.52px;}.tw-cls-5,.tw-cls-6{font-size:31.44px;}.tw-cls-7{font-size:17.71px;}.tw-cls-6{letter-spacing:0em;}</style></defs><g id="Camada_1-2"><text class="tw-cls-3" transform="translate(0 26.72)"><tspan class="tw-cls-6" x="0" y="0">a</tspan><tspan class="tw-cls-5" x="11.6" y="0">viv</tspan><tspan class="tw-cls-7" x="40.14" y="0"> </tspan><tspan class="tw-cls-5" x="42.98" y="0">SDG</tspan></text><text class="tw-cls-4" transform="translate(18.03 42.59)"><tspan class="tw-cls-2" x="0" y="0">e</tspan><tspan x="6.48" y="0">di</tspan><tspan class="tw-cls-1" x="16.01" y="0">t</tspan><tspan x="20.57" y="0">orial</tspan></text></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 79.7 46.3">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2">
+    <g class="st1">
+      <g class="st1">
+        <path class="st0" d="M7.8,26.7c0-.2-.2-.9-.3-1.9-.6,1.4-1.8,2.2-3.4,2.2s-3.5-1.5-3.5-4,1-4,3.9-5.3c2.3-1.1,2.6-1.4,2.6-2.3v-.3c0-1.3-.4-1.8-1.4-1.8s-1.5.7-1.5,1.9v.6H1.1v-.4c0-3.1,1.6-4.9,4.7-4.9s4.7,1.8,4.7,5.3v6.4c0,2.3.2,3.7.4,4.6h-3ZM7.1,21.5v-2.7c-.3.3-.8.6-1.6,1.2-1,.6-1.5,1.4-1.5,2.5s.5,1.7,1.4,1.7,1.7-.9,1.7-2.7Z"/>
+      </g>
+      <g class="st1">
+        <path class="st0" d="M12,10.7h3.4l2,11.5,2-11.5h3.1l-3.2,16h-4.1l-3.2-16Z"/>
+        <path class="st0" d="M24.2,5.1h3.3v3.6h-3.3v-3.6ZM24.2,10.7h3.3v16h-3.3V10.7Z"/>
+        <path class="st0" d="M29.2,10.7h3.4l2,11.5,2-11.5h3.1l-3.2,16h-4.1l-3.2-16Z"/>
+      </g>
+      <g class="st1">
+        <path class="st0" d="M43.7,21.5v-1.3h3.3v1.5c0,1.6.7,2.1,1.8,2.1s1.8-.6,1.8-2.2-.8-3-3-4.9c-2.9-2.5-3.9-4.4-3.9-6.9s1.8-5.5,5.2-5.5,5,2,5,5.5v.9h-3.3v-1.1c0-1.6-.6-2.2-1.7-2.2s-1.8.6-1.8,2.1.8,2.7,3,4.7c2.9,2.5,3.8,4.3,3.8,7.1s-1.8,5.6-5.2,5.6-5.1-2-5.1-5.5Z"/>
+        <path class="st0" d="M55.9,4.7h5.3c3.5,0,5.2,1.9,5.2,5.4v11.1c0,3.5-1.7,5.4-5.2,5.4h-5.3V4.7ZM61.2,23.6c1.1,0,1.8-.6,1.8-2.1v-11.4c0-1.6-.7-2.1-1.8-2.1h-1.8v15.7h1.8Z"/>
+        <path class="st0" d="M68.4,21.5v-11.6c0-3.5,1.8-5.5,5.2-5.5s5.2,2,5.2,5.5v1.9h-3.3v-2.1c0-1.6-.7-2.2-1.8-2.2s-1.8.6-1.8,2.2v12c0,1.6.7,2.1,1.8,2.1s1.8-.6,1.8-2.1v-4.3h-1.7v-3.1h5v7.2c0,3.5-1.8,5.5-5.2,5.5s-5.2-2-5.2-5.5Z"/>
+      </g>
+    </g>
+    <g class="st1">
+      <g class="st1">
+        <path class="st0" d="M23.8,36.5v1.9h-4v1.7c0,1.2.5,1.8,1.5,1.8s1.5-.6,1.5-1.8v-.2h1c0,1.9-.9,3-2.5,3s-2.5-1-2.5-2.8v-3.5c0-1.8.9-2.8,2.5-2.8s2.5,1,2.5,2.8ZM22.8,37.4v-1.1c0-1.2-.5-1.8-1.5-1.8s-1.5.6-1.5,1.8v1.1h3Z"/>
+      </g>
+      <g class="st1">
+        <path class="st0" d="M29.5,42.6c0-.2-.1-.7-.1-1.3-.4.9-1.1,1.4-2,1.4s-2.1-.8-2.1-2.5v-4c0-1.7.8-2.5,2.1-2.5s1.5.4,1.9,1.2v-4.5h1.1v9.9c0,1.1,0,1.8.2,2.3h-1ZM29.3,39.6v-2.8c0-1.4-.7-2.2-1.6-2.2s-1.3.6-1.3,1.7v3.9c0,1,.4,1.7,1.3,1.7s1.6-.8,1.6-2.2Z"/>
+        <path class="st0" d="M32.1,30.7h1.1v1.8h-1.1v-1.8ZM32.1,33.8h1.1v8.8h-1.1v-8.8Z"/>
+      </g>
+      <g class="st1">
+        <path class="st0" d="M36.5,34.7v6c0,.8.3,1.1.9,1.1s.5,0,.8-.2v.9c-.3.1-.6.2-1,.2-1.2,0-1.8-.6-1.8-1.9v-6.1h-1.1v-.9h1.2v-2.6h1v2.6h1.7v.9h-1.7Z"/>
+      </g>
+      <g class="st1">
+        <path class="st0" d="M39.3,39.9v-3.5c0-1.8.9-2.8,2.5-2.8s2.5,1,2.5,2.8v3.5c0,1.8-.9,2.8-2.5,2.8s-2.5-1-2.5-2.8ZM43.3,40v-3.7c0-1.1-.5-1.8-1.5-1.8s-1.5.7-1.5,1.8v3.7c0,1.1.5,1.8,1.5,1.8s1.5-.7,1.5-1.8Z"/>
+        <path class="st0" d="M49.4,33.8v1.1c-.2,0-.4-.1-.6-.1-1.2,0-1.8.9-1.8,2.8v5.1h-1.1v-8.8h.9v1.4c.4-1.1,1-1.6,1.9-1.6s.4,0,.6.1Z"/>
+        <path class="st0" d="M50.5,30.7h1.1v1.8h-1.1v-1.8ZM50.5,33.8h1.1v8.8h-1.1v-8.8Z"/>
+        <path class="st0" d="M57.2,42.6c0-.2-.1-.7-.1-1.2-.4.9-1.1,1.4-2.1,1.4s-2-.8-2-2.1.6-2.1,2.2-2.8c1.6-.7,1.8-.9,1.8-1.5v-.2c0-.9-.5-1.5-1.3-1.5s-1.4.5-1.4,1.5v.2h-1v-.2c0-1.6.9-2.5,2.4-2.5s2.4.9,2.4,2.5v4.1c0,1,0,1.8.2,2.3h-1ZM57,39.6v-1.9c-.2.3-.6.5-1.5.9-1,.5-1.5,1.1-1.5,1.9s.4,1.3,1.2,1.3,1.7-.8,1.7-2.2Z"/>
+        <path class="st0" d="M59.8,30.3h1.1v12.3h-1.1v-12.3Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

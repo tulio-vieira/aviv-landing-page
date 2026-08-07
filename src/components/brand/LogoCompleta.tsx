@@ -1,6 +1,4 @@
-import { readBrandSvg } from "@/lib/read-svg";
-
-const markup = readBrandSvg("logo-completa.svg");
+import logoCompleta from "@/assets/svg/logo-completa.svg";
 
 type LogoCompletaProps = {
   className?: string;
@@ -9,12 +7,10 @@ type LogoCompletaProps = {
 // Footer badge ("aviv SDG editorial" + flourish), used as-is from the design file.
 export function LogoCompleta({ className }: LogoCompletaProps) {
   return (
-    <div
-      data-brand-svg
-      className={className}
-      role="img"
-      aria-label="aviv SDG editorial"
-      dangerouslySetInnerHTML={{ __html: markup }}
+    <img
+      src={logoCompleta.src}
+      alt="aviv SDG editorial"
+      className={["block h-auto w-full", className].filter(Boolean).join(" ")}
     />
   );
 }

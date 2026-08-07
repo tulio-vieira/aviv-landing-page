@@ -1,6 +1,4 @@
-import { readBrandSvg } from "@/lib/read-svg";
-
-const markup = readBrandSvg("logo-lettering.svg");
+import logoLettering from "@/assets/svg/logo-lettering.svg";
 
 type LogoLetteringProps = {
   className?: string;
@@ -9,12 +7,10 @@ type LogoLetteringProps = {
 // Topbar wordmark ("aviv SDG editorial"), used as-is from the design file.
 export function LogoLettering({ className }: LogoLetteringProps) {
   return (
-    <div
-      data-brand-svg
-      className={className}
-      role="img"
-      aria-label="aviv SDG editorial"
-      dangerouslySetInnerHTML={{ __html: markup }}
+    <img
+      src={logoLettering.src}
+      alt="aviv SDG editorial"
+      className={["block h-auto w-full", className].filter(Boolean).join(" ")}
     />
   );
 }
