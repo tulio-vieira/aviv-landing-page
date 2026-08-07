@@ -30,7 +30,7 @@ export function BookCarousel() {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  // This useeffect is for resettin autoplay delay everytime the user moves a slide,
+  // This useeffect is for resetting autoplay delay everytime the user moves a slide,
   // either by pressing the button our by swipping.
   useEffect(() => {
     if (!emblaApi) return;
@@ -60,7 +60,7 @@ export function BookCarousel() {
                   <img
                     src={slide.thumb}
                     alt={slide.alt}
-                    className="h-[70vh] max-h-180 min-h-100 w-full object-cover"
+                    className="h-[70vh] max-h-50 sm:max-h-140 sm:min-h-100 w-full object-cover"
                     loading="lazy"
                   />
                 </button>
