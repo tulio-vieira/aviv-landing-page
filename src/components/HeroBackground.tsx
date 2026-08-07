@@ -62,7 +62,6 @@ export function HeroBackground() {
           <source src={withBasePath("/videos/hero.mp4")} type="video/mp4" />
         </video>
       ) : (
-        // eslint-disable-next-line @next/next/no-img-element
         <img
           src={withBasePath("/images/hero-poster.webp")}
           alt="Pessoa lendo um livro em uma poltrona, cercada por estantes cheias de livros"

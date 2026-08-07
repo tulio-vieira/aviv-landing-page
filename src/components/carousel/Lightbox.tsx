@@ -46,7 +46,7 @@ export function Lightbox({ slides, index, onClose, onIndexChange }: LightboxProp
       role="dialog"
       aria-modal="true"
       aria-label="Capa de livro ampliada"
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4"
+      className="fixed inset-0 z-60 flex items-center justify-center bg-black/85 p-4"
       onClick={onClose}
     >
       <button
@@ -83,7 +83,6 @@ export function Lightbox({ slides, index, onClose, onIndexChange }: LightboxProp
         </svg>
       </button>
 
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={slide.full}
         alt={slide.alt}
