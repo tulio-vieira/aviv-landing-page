@@ -21,7 +21,7 @@ export function Contato() {
             href={CONTACT.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-graphite inline-flex items-center gap-2 text-xl font-semibold sm:justify-end"
+            className="inline-flex items-center gap-2 text-xl font-semibold sm:justify-end text-maroon"
           >
             {CONTACT.whatsappDisplay}
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -31,6 +31,7 @@ export function Contato() {
           <p className="border-maroon inline-block rounded-full border px-4 py-1 font-medium">
             {CONTACT.hoursNote}
           </p>
+          <p>Se precisar, a gente liga pra você. Não se preocupe.</p>
           <p>
             <a
               href={`mailto:${CONTACT.email}`}

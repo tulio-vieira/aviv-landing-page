@@ -10,8 +10,8 @@ export function Sobre() {
 
       <blockquote className="mt-8">
         <p className="font-serif text-lg italic text-graphite sm:text-xl">
-          &ldquo;Tudo de bom que recebemos e tudo o que é perfeito vêm do céu,
-          vêm de Deus, o Criador das luzes do céu.&rdquo;
+          Tudo de bom que recebemos e tudo o que é perfeito vêm do céu,
+          vêm de Deus, o Criador das luzes do céu.
         </p>
         <cite className="mt-2 block text-sm font-serif not-italic text-graphite/70">
           Tg 1:17 (NTLH)
