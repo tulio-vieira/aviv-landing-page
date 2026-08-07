@@ -78,9 +78,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${sourceSans.variable} ${oswald.variable} ${ebGaramond.variable} ${bebasNeue.variable} antialiased`}
     >
-      <body className="flex min-h-screen flex-col bg-white">
+      <body className="flex min-h-screen flex-col bg-zinc-100">
         <Topbar />
-        <main className="flex-1">{children}</main>
+        <main className="mx-auto w-full flex-1 bg-white" style={{maxWidth: "100rem"}}>{children}</main>
         <Footer />
       </body>
     </html>
