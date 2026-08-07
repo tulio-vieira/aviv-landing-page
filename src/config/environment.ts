@@ -22,8 +22,14 @@ const configs: Record<Environment, EnvironmentConfig> = {
 const environment: Environment =
   process.env.NEXT_PUBLIC_ENVIRONMENT === "stage" ? "stage" : "prod";
 
-export const environmentConfig = configs[environment];
+// Bump this manually whenever a static asset in public/ is replaced, to bust caches on GitHub Pages.
+const STATIC_ASSET_ID = "1";
+
+export const environmentConfig = {
+  ...configs[environment],
+  staticAssetId: STATIC_ASSET_ID,
+};
 
 export function withBasePath(path: string): string {
-  return `${environmentConfig.basePath}${path}`;
+  return `${environmentConfig.basePath}${path}?v=${environmentConfig.staticAssetId}`;
 }
