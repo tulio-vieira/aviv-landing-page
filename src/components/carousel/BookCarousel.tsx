@@ -60,7 +60,7 @@ export function BookCarousel() {
                   <img
                     src={slide.thumb}
                     alt={slide.alt}
-                    className="h-[70vh] max-h-50 sm:max-h-140 sm:min-h-100 w-full object-cover"
+                    className="h-[70vh] max-h-50 sm:max-h-140 sm:min-h-100 w-full object-cover cursor-pointer"
                     loading="lazy"
                   />
                 </button>
@@ -73,7 +73,7 @@ export function BookCarousel() {
           type="button"
           onClick={scrollPrev}
           aria-label="Capa anterior"
-          className="text-graphite absolute top-1/2 left-3 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow-sm backdrop-blur-sm transition-colors hover:bg-white sm:left-6"
+          className="text-graphite absolute top-1/2 left-3 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow-sm backdrop-blur-sm transition-colors hover:bg-white sm:left-6 cursor-pointer"
         >
           <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M15 6l-6 6 6 6" />
@@ -83,7 +83,7 @@ export function BookCarousel() {
           type="button"
           onClick={scrollNext}
           aria-label="Próxima capa"
-          className="text-graphite absolute top-1/2 right-3 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow-sm backdrop-blur-sm transition-colors hover:bg-white sm:right-6"
+          className="text-graphite absolute top-1/2 right-3 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow-sm backdrop-blur-sm transition-colors hover:bg-white sm:right-6 cursor-pointer"
         >
           <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M9 6l6 6-6 6" />

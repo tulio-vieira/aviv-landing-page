@@ -54,7 +54,7 @@ export function Lightbox({ slides, index, onClose, onIndexChange }: LightboxProp
         type="button"
         onClick={onClose}
         aria-label="Fechar"
-        className="absolute top-4 right-4 rounded-full p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+        className="absolute top-4 right-4 rounded-full p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-white cursor-pointer"
       >
         <svg
           className="h-7 w-7"
@@ -76,7 +76,7 @@ export function Lightbox({ slides, index, onClose, onIndexChange }: LightboxProp
           event.stopPropagation();
           onIndexChange((index - 1 + slides.length) % slides.length);
         }}
-        className="absolute left-2 rounded-full p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white sm:left-6"
+        className="absolute left-2 rounded-full p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-white sm:left-6 cursor-pointer"
       >
         <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M15 6l-6 6 6 6" />
@@ -97,7 +97,7 @@ export function Lightbox({ slides, index, onClose, onIndexChange }: LightboxProp
           event.stopPropagation();
           onIndexChange((index + 1) % slides.length);
         }}
-        className="absolute right-2 rounded-full p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white sm:right-6"
+        className="absolute right-2 rounded-full p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-white sm:right-6 cursor-pointer"
       >
         <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M9 6l6 6-6 6" />
