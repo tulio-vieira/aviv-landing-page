@@ -4,13 +4,14 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Lightbox } from "./Lightbox";
+import { withBasePath } from "@/config/environment";
 
 const SLIDE_COUNT = 12;
 const slides = Array.from({ length: SLIDE_COUNT }, (_, i) => {
   const n = i + 1;
   return {
-    thumb: `/images/carousel/carrossel-${n}-thumb.webp`,
-    full: `/images/carousel/carrossel-${n}-full.webp`,
+    thumb: withBasePath(`/images/carousel/carrossel-${n}-thumb.webp`),
+    full: withBasePath(`/images/carousel/carrossel-${n}-full.webp`),
     alt: `Capa de livro publicado pela aviv SDG Editorial (${n} de ${SLIDE_COUNT})`,
   };
 });

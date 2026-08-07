@@ -27,7 +27,7 @@ jobs:
       - run: npm run lint
       - run: npm run build
         env:
-          ENVIRONMENT: stage
+          NEXT_PUBLIC_ENVIRONMENT: stage
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { withBasePath } from "@/config/environment";
 
 type ConnectionLike = EventTarget & {
   saveData?: boolean;
@@ -39,17 +40,7 @@ function getServerSnapshot() {
   return false;
 }
 
-type HeroBackgroundProps = {
-  videoWebmSrc: string;
-  videoMp4Src: string;
-  posterSrc: string;
-};
-
-export function HeroBackground({
-  videoWebmSrc,
-  videoMp4Src,
-  posterSrc,
-}: HeroBackgroundProps) {
+export function HeroBackground() {
   const shouldPlayVideo = useSyncExternalStore(
     subscribe,
     computeShouldPlayVideo,
@@ -65,15 +56,15 @@ export function HeroBackground({
           muted
           loop
           playsInline
-          poster={posterSrc}
+          poster={withBasePath("/images/hero-poster.webp")}
         >
-          <source src={videoWebmSrc} type="video/webm" />
-          <source src={videoMp4Src} type="video/mp4" />
+          <source src={withBasePath("/videos/hero.webm")} type="video/webm" />
+          <source src={withBasePath("/videos/hero.mp4")} type="video/mp4" />
         </video>
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={posterSrc}
+          src={withBasePath("/images/hero-poster.webp")}
           alt="Pessoa lendo um livro em uma poltrona, cercada por estantes cheias de livros"
           className="h-full w-full object-cover"
           fetchPriority="high"

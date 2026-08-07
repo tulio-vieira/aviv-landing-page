@@ -19,7 +19,8 @@ const configs: Record<Environment, EnvironmentConfig> = {
   },
 };
 
-const environment: Environment = process.env.ENVIRONMENT === "stage" ? "stage" : "prod";
+const environment: Environment =
+  process.env.NEXT_PUBLIC_ENVIRONMENT === "stage" ? "stage" : "prod";
 
 export const environmentConfig = configs[environment];
 
