@@ -2,38 +2,17 @@
 
 import { useSyncExternalStore } from "react";
 import { withBasePath } from "@/config/environment";
+import { useAfterInitialLoad } from "@/hooks/useAfterInitialLoad";
+import { useSlowConnection } from "@/hooks/useSlowConnection";
 
-type ConnectionLike = EventTarget & {
-  saveData?: boolean;
-  effectiveType?: string;
-};
-
-function getConnection(): ConnectionLike | undefined {
-  return (navigator as Navigator & { connection?: ConnectionLike }).connection;
-}
-
-function computeShouldPlayVideo() {
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-  const connection = getConnection();
-  const isDataSaver = Boolean(connection?.saveData);
-  const isSlowConnection = connection?.effectiveType
-    ? ["slow-2g", "2g"].includes(connection.effectiveType)
-    : false;
-
-  return !prefersReducedMotion && !isDataSaver && !isSlowConnection;
-}
-
-function subscribe(onChange: () => void) {
+function subscribeReducedMotion(onChange: () => void) {
   const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const connection = getConnection();
   motionQuery.addEventListener("change", onChange);
-  connection?.addEventListener("change", onChange);
-  return () => {
-    motionQuery.removeEventListener("change", onChange);
-    connection?.removeEventListener("change", onChange);
-  };
+  return () => motionQuery.removeEventListener("change", onChange);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 function getServerSnapshot() {
@@ -41,11 +20,17 @@ function getServerSnapshot() {
 }
 
 export function HeroBackground() {
-  const shouldPlayVideo = useSyncExternalStore(
-    subscribe,
-    computeShouldPlayVideo,
+  const prefersReducedMotion = useSyncExternalStore(
+    subscribeReducedMotion,
+    getReducedMotionSnapshot,
     getServerSnapshot
   );
+  const isSlowConnection = useSlowConnection();
+  const afterInitialLoad = useAfterInitialLoad();
+
+  // Poster loads first for everyone; video only takes over once eligible
+  // (motion/connection preferences) and the initial page load has settled.
+  const shouldPlayVideo = !prefersReducedMotion && !isSlowConnection && afterInitialLoad;
 
   return (
     <div className="absolute inset-0">

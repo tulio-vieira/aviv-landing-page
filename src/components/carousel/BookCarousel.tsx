@@ -1,10 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Lightbox } from "./Lightbox";
 import { withBasePath } from "@/config/environment";
+import { useAfterInitialLoad } from "@/hooks/useAfterInitialLoad";
+import { useSlowConnection } from "@/hooks/useSlowConnection";
 
 const SLIDE_COUNT = 12;
 const slides = Array.from({ length: SLIDE_COUNT }, (_, i) => {
@@ -26,6 +28,12 @@ export function BookCarousel() {
     }),
   ]);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [upgradedSlides, setUpgradedSlides] = useState<ReadonlySet<number>>(
+    () => new Set()
+  );
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const afterInitialLoad = useAfterInitialLoad();
+  const isSlowConnection = useSlowConnection();
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -41,6 +49,33 @@ export function BookCarousel() {
     };
   }, [emblaApi]);
 
+  // Upgrade each slide from thumb to full once it's ~one slide-width from
+  // view, but only after the initial page load and never on slow connections.
+  useEffect(() => {
+    if (!afterInitialLoad || isSlowConnection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const index = Number((entry.target as HTMLElement).dataset.slideIndex);
+          setUpgradedSlides((prev) => {
+            if (prev.has(index)) return prev;
+            return new Set(prev).add(index);
+          });
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: "100% 0px" }
+    );
+
+    for (const el of slideRefs.current) {
+      if (el) observer.observe(el);
+    }
+
+    return () => observer.disconnect();
+  }, [afterInitialLoad, isSlowConnection]);
+
   return (
     <section id="livros" className="bg-zinc-100 py-16 sm:py-24">
       <h2 className="font-heading text-graphite text-center text-2xl tracking-wide sm:text-3xl mb-14">
@@ -50,7 +85,14 @@ export function BookCarousel() {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex touch-pan-y gap-4">
             {slides.map((slide, index) => (
-              <div className="min-w-0 flex-[0_0_85%]" key={slide.thumb}>
+              <div
+                className="min-w-0 flex-[0_0_85%]"
+                key={slide.thumb}
+                ref={(el) => {
+                  slideRefs.current[index] = el;
+                }}
+                data-slide-index={index}
+              >
                 <button
                   type="button"
                   className="focus-visible:outline-maroon block w-full overflow-hidden transition-transform hover:scale-[1.02] focus-visible:outline"
@@ -58,7 +100,7 @@ export function BookCarousel() {
                   aria-label={`Ampliar capa de livro ${index + 1} de ${SLIDE_COUNT}`}
                 >
                   <img
-                    src={slide.thumb}
+                    src={upgradedSlides.has(index) ? slide.full : slide.thumb}
                     alt={slide.alt}
                     className="h-[70vh] max-h-50 sm:max-h-140 sm:min-h-100 w-full object-cover cursor-pointer"
                     loading="lazy"
