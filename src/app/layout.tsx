@@ -78,7 +78,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${sourceSans.variable} ${oswald.variable} ${ebGaramond.variable} ${bebasNeue.variable} antialiased`}
     >
-      <body className="flex min-h-screen flex-col bg-zinc-100">
+      <body className="bg-graphite relative flex min-h-screen flex-col">
+        <div className="absolute inset-0 -z-10 bg-zinc-100" aria-hidden="true" />
         <Topbar />
         <main className="mx-auto w-full flex-1 bg-white" style={{maxWidth: "100rem"}}>{children}</main>
         <Footer />
