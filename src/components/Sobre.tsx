@@ -4,7 +4,7 @@ export function Sobre() {
       <h2 className="font-oswald font-bold text-2xl text-graphite sm:text-3xl">
         Nascemos do desejo de{" "}
         <span className="border-maroon border px-3 py-0.5 rounded-full">
-          Servir
+          servir
         </span>
       </h2>
 
@@ -20,7 +20,7 @@ export function Sobre() {
 
       <div className="mt-8 space-y-5 text-base leading-relaxed text-graphite sm:text-lg">
         <p>
-          Entendemos que todo dom e talento provém de Deus. Para nós, não há
+          Acreditamos que todo dom e talento provém de Deus. Para nós, não há
           outra maneira de retribuir a quem nos criou se não ofertando a Ele
           mesmo o que recebemos de melhor.
         </p>
@@ -38,7 +38,7 @@ export function Sobre() {
         </p>
       </div>
 
-      <p className="mt-8 font-serif text-base text-graphite">
+      <p className="mt-8 font-serif text-base text-graphite sm:text-xl">
         A Cristo Jesus, <em>Soli Deo Gloria</em>.
       </p>
     </section>

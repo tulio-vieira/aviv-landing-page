@@ -78,7 +78,7 @@ export function BookCarousel() {
 
   return (
     <section id="livros" className="bg-zinc-100 py-16 sm:py-24">
-      <h2 className="font-heading text-graphite text-center text-2xl tracking-wide sm:text-3xl mb-14">
+      <h2 className="font-oswald font-bold text-2xl text-graphite sm:text-3xl text-center tracking-wide mb-16">
         Nosso trabalho
       </h2>
       <div className="relative">

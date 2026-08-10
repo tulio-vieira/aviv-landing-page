@@ -9,7 +9,7 @@ export function Hero() {
     >
       <HeroBackground />
 
-      <div className="relative z-10 w-56 sm:w-72 md:w-80">
+      <div className="relative z-10 w-56 sm:w-72 md:w-80 2xl:w-100">
         <AvivStamp />
       </div>
     </section>

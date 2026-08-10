@@ -16,7 +16,7 @@ export function Contato() {
           </p>
         </div>
 
-        <div className="space-y-3 sm:text-left">
+        <div className="space-y-3 sm:text-left ml-4">
           <a
             href={CONTACT.whatsappUrl}
             target="_blank"
@@ -24,11 +24,10 @@ export function Contato() {
             className="inline-flex items-center gap-2 text-xl font-semibold sm:justify-end text-maroon"
           >
             {CONTACT.whatsappDisplay}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={withBasePath("/icons/whatsapp-alt.svg")} alt="" className="h-6 w-6" />
           </a>
           <p className="text-graphite/80">{CONTACT.hours}</p>
-          <p className="border-maroon inline-block rounded-full border px-4 py-1 font-medium">
+          <p className="border-maroon inline-block rounded-full border px-4 py-1 font-medium -ml-4">
             {CONTACT.hoursNote}
           </p>
           <p>Se precisar, a gente liga pra você. Não se preocupe.</p>
