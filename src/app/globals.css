@@ -16,6 +16,10 @@
   --font-display: var(--font-bebas-neue);
 }
 
+html {
+  background-color: var(--graphite);
+}
+
 body {
   color: var(--graphite);
   font-family: var(--font-sans);
