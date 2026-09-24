@@ -8,7 +8,7 @@ import { withBasePath } from "@/config/environment";
 import { useAfterInitialLoad } from "@/hooks/useAfterInitialLoad";
 import { useSlowConnection } from "@/hooks/useSlowConnection";
 
-const SLIDE_COUNT = 12;
+const SLIDE_COUNT = 13;
 const slides = Array.from({ length: SLIDE_COUNT }, (_, i) => {
   const n = i + 1;
   return {

@@ -13,26 +13,26 @@ const CAROUSEL_OUTPUT_DIR = path.join(OUTPUT_DIR, "carousel");
 async function convert(inputPath, outputPath, width, quality) {
   await sharp(inputPath)
     .resize({ width, withoutEnlargement: true })
-    .webp({ quality })
+    .webp(quality)
     .toFile(outputPath);
 }
 
 async function main() {
   await mkdir(CAROUSEL_OUTPUT_DIR, { recursive: true });
 
-  for (let i = 1; i <= 12; i++) {
+  for (let i = 1; i <= 13; i++) {
     const input = path.join(SOURCE_DIR, `carrossel-${i}.png`);
     await convert(
       input,
       path.join(CAROUSEL_OUTPUT_DIR, `carrossel-${i}-thumb.webp`),
       900,
-      78
+      {quality: 78}
     );
     await convert(
       input,
       path.join(CAROUSEL_OUTPUT_DIR, `carrossel-${i}-full.webp`),
       1800,
-      82
+      {quality: 100, lossless: true}
     );
     console.log(`carrossel-${i}: thumb + full done`);
   }
