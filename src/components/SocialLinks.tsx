@@ -12,15 +12,14 @@ export function SocialLinks({
 }: SocialLinksProps) {
   return (
     <div className={className}>
-      <a
+      {/* <a
         href={CONTACT.instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram da aviv SDG"
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={withBasePath("/icons/instagram.svg")} alt="" className={iconClassName} />
-      </a>
+      </a> */}
       <a
         href={CONTACT.whatsappUrl}
         target="_blank"
@@ -30,13 +29,19 @@ export function SocialLinks({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={withBasePath("/icons/whatsapp.svg")} alt="" className={iconClassName} />
       </a>
-      {/* No Amazon store yet, so this icon is shown but intentionally not a link. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={withBasePath("/icons/amazon.svg")}
-        alt="Loja na Amazon em breve"
-        className={iconClassName}
-      />
+      <a
+        href={CONTACT.amazonUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp da aviv SDG"
+      >
+        <img
+          src={withBasePath("/icons/amazon.svg")}
+          alt="Loja na Amazon em breve"
+          className={iconClassName}
+        />
+      </a>
     </div>
   );
 }

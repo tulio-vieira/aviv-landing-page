@@ -39,6 +39,7 @@ export function HeroBackground() {
           className="h-full w-full object-cover"
           autoPlay
           muted
+          aria-label="Pessoa lendo um livro em uma poltrona, cercada por estantes cheias de livros. Fonte: Cottonbro Studio, Pexels.com"
           loop
           playsInline
           poster={withBasePath("/images/hero-poster.webp")}
@@ -49,7 +50,7 @@ export function HeroBackground() {
       ) : (
         <img
           src={withBasePath("/images/hero-poster.webp")}
-          alt="Pessoa lendo um livro em uma poltrona, cercada por estantes cheias de livros"
+          alt="Pessoa lendo um livro em uma poltrona, cercada por estantes cheias de livros. Fonte: Cottonbro Studio, Pexels.com"
           className="h-full w-full object-cover"
           fetchPriority="high"
         />

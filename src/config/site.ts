@@ -3,14 +3,15 @@ import { environmentConfig } from "./environment";
 export const SITE_URL = environmentConfig.siteUrl;
 export const SITE_NAME = "aviv SDG Editorial";
 
-const WHATSAPP_NUMBER = "556130303030"; // +55 61 3030-3030, as provided
+const WHATSAPP_NUMBER = "556135329890"; // +55 61 3030-3030, as provided
 
 export const CONTACT = {
   whatsappNumber: WHATSAPP_NUMBER,
-  whatsappDisplay: "61 3030-3030",
+  whatsappDisplay: "61 3532-9890",
   whatsappUrl: `https://wa.me/${WHATSAPP_NUMBER}`,
   // TODO: replace with the real Instagram handle once available.
   instagramUrl: `https://wa.me/${WHATSAPP_NUMBER}`,
+  amazonUrl: "https://www.amazon.com.br/shops/avivsdg",
   email: "atendimento@avivsdg.com.br",
   hours: "De segunda a sexta-feira, das 9 às 18h",
   hoursNote: "Atendimento EXCLUSIVAMENTE por WhatsApp e Email",
