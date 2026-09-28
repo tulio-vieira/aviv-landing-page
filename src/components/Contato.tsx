@@ -21,6 +21,8 @@ export function Contato() {
             href={CONTACT.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-event="contact_whatsapp"
+            data-analytics-section="contato"
             className="inline-flex items-center gap-2 text-xl font-semibold sm:justify-end text-maroon"
           >
             {CONTACT.whatsappDisplay}
@@ -34,6 +36,8 @@ export function Contato() {
           <p>
             <a
               href={`mailto:${CONTACT.email}`}
+              data-analytics-event="contact_email"
+              data-analytics-section="contato"
               className="text-maroon hover:underline"
             >
               {CONTACT.email}

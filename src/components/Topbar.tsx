@@ -33,7 +33,7 @@ export function Topbar() {
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
-          <SocialLinks className="flex items-center gap-3" iconClassName="h-7 w-7" />
+          <SocialLinks section="topbar" className="flex items-center gap-3" iconClassName="h-7 w-7" />
         </div>
 
         <MobileMenuToggle />

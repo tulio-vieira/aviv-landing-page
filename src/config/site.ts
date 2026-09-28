@@ -12,7 +12,7 @@ export const CONTACT = {
   // TODO: replace with the real Instagram handle once available.
   instagramUrl: `https://wa.me/${WHATSAPP_NUMBER}`,
   amazonUrl: "https://www.amazon.com.br/shops/avivsdg",
-  email: "atendimento@avivsdg.com.br",
+  email: "atendimento@aviveditorial.com.br",
   hours: "De segunda a sexta-feira, das 9 às 18h",
   hoursNote: "Atendimento EXCLUSIVAMENTE por WhatsApp e Email",
 } as const;

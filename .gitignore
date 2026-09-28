@@ -42,3 +42,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# terraform (local state holds the only record of the prod infrastructure — back it up, never commit it)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars

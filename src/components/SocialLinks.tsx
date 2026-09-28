@@ -2,11 +2,14 @@ import { CONTACT } from "@/config/site";
 import { withBasePath } from "@/config/environment";
 
 type SocialLinksProps = {
+  // Reported as the "section" parameter of the contact_whatsapp GA event.
+  section: string;
   className?: string;
   iconClassName?: string;
 };
 
 export function SocialLinks({
+  section,
   className,
   iconClassName = "h-8 w-8",
 }: SocialLinksProps) {
@@ -25,6 +28,8 @@ export function SocialLinks({
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp da aviv SDG"
+        data-analytics-event="contact_whatsapp"
+        data-analytics-section={section}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={withBasePath("/icons/whatsapp.svg")} alt="" className={iconClassName} />

@@ -55,7 +55,7 @@ export function MobileMenuToggle() {
             ))}
           </nav>
           <div className="border-t border-white/20 px-4 py-3">
-            <SocialLinks className="flex items-center gap-4" iconClassName="h-7 w-7" />
+            <SocialLinks section="mobile-menu" className="flex items-center gap-4" iconClassName="h-7 w-7" />
           </div>
         </div>
       )}

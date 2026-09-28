@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Oswald, Source_Sans_3, EB_Garamond, Bebas_Neue } from "next/font/google";
 import { Topbar } from "@/components/Topbar";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { SITE_NAME, SITE_URL } from "@/config/site";
 import { environmentConfig } from "@/config/environment";
 import "./globals.css";
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Topbar />
         <main className="mx-auto w-full flex-1 bg-white" style={{maxWidth: "100rem"}}>{children}</main>
         <Footer />
+        <GoogleAnalytics />
       </body>
     </html>
   );
