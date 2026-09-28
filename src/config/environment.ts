@@ -20,7 +20,7 @@ const configs: Record<Environment, EnvironmentConfig> = {
     basePath: "",
     allowIndexing: true,
     // TODO: set the real GA4 Measurement ID (see "Google Analytics" in CLAUDE.md).
-    gaMeasurementId: null,
+    gaMeasurementId: "G-YDZJT7CXZR",
   },
 };
 
