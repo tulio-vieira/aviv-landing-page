@@ -81,6 +81,10 @@ This took the original ~8MB video down to ~1.6MB combined (mp4 + webm). [HeroBac
 
 `aviv-stamp.svg`, `logo-lettering.svg`, `logo-completa.svg` in `src/assets/svg/` are imported directly (`import avivStamp from "@/assets/svg/aviv-stamp.svg"`) by the components in `src/components/brand/`. They started as live Illustrator text (which depended on a paid font we don't have web-license for, and briefly caused a rendering bug), and were re-exported with text converted to outlines — so they're now plain vector paths with no font dependency at all. **To update:** re-export from Illustrator with `Type > Create Outlines` applied before saving, drop the file in `src/assets/svg/`, done.
 
+### Favicon (no processing needed)
+
+`src/app/icon.png` (browser tab + Google Search result) and `src/app/apple-icon.png` (iOS home screen) are the same 144×144 PNG, picked up by Next.js's file convention — no import or metadata needed. Google Search only shows a favicon that is a **raster** image (no SVG), **square**, and ideally a multiple of 48px, which is why this isn't an SVG like the other brand assets. **To update:** replace both files with the new export (keep them square), done. Next.js adds a content hash to the icon URLs, so there's no need to bump `STATIC_ASSET_ID`.
+
 ## Fonts
 
 The original design specifies three paid/commercial fonts we don't have web-embedding rights for (Myriad Pro, Adobe Garamond Pro, Bebas Neue Pro). We substitute close free equivalents via `next/font/google` (self-hosted at build time, no runtime request to Google) in [layout.tsx](src/app/layout.tsx):
