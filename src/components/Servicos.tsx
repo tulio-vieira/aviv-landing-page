@@ -4,20 +4,24 @@ import { ServiceItem } from "@/components/ServiceItem";
 const SERVICOS = [
   {
     title: "Preparação de originais",
+    isH1: false,
     description:
       "Conhecer o texto e seu autor para juntos criarmos uma obra única.",
   },
   {
     title: "Estruturação textual",
+    isH1: false,
     description:
       "Uma visão crítica sobre o texto para torná-lo ainda mais atrativo ao público.",
   },
   {
     title: "Revisão e tradução",
+    isH1: false,
     description: "Revisões ortográfica, técnica e de prova. Tradução inglês/português.",
   },
   {
     title: "Edição e acompanhamento gráfico",
+    isH1: true,
     description:
       "Produção visual da capa e do miolo, sob critérios de unicidade e qualidade.",
   },
@@ -33,7 +37,7 @@ export function Servicos() {
 
       <div className="mt-10 grid gap-x-10 gap-y-8 text-center sm:grid-cols-2">
         {SERVICOS.map((servico) => (
-          <ServiceItem key={servico.title} {...servico} />
+          <ServiceItem key={servico.title} {...servico} isH1={servico.isH1} />
         ))}
       </div>
     </section>
