@@ -9,7 +9,7 @@ export function Sobre() {
       </h2>
 
       <blockquote className="mt-8">
-        <p className="font-serif text-lg italic text-graphite sm:text-xl">
+        <p className="font-serif text-lg italic text-graphite sm:text-xl" style={{maxWidth: "60%", margin: "auto"}}>
           Tudo de bom que recebemos e tudo o que é perfeito vêm do céu,
           vêm de Deus, o Criador das luzes do céu.
         </p>
